@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svetlana <svetlana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svydrina <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 16:11:56 by svydrina          #+#    #+#             */
-/*   Updated: 2023/08/31 15:28:46 by svetlana         ###   ########.fr       */
+/*   Created: 2023/05/24 16:41:52 by svydrina          #+#    #+#             */
+/*   Updated: 2023/08/25 02:57:48 by svydrina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_putnbr(int n)
 {
-	void	*new;
+	long	l;
+	int		res;
 
-	if (nmemb != 0 && size != 0)
+	l = n;
+	res = 0;
+	if (n < 0)
 	{
-		if ((nmemb * size) / size != nmemb)
-			return (NULL);
+		res += ft_putchar('-');
+		l *= -1;
 	}
-	new = malloc(size * nmemb);
-	if (!new)
-		return (NULL);
-	ft_bzero(new, nmemb * size);
-	return (new);
+	res += ft_put_posint((unsigned int)l);
+	return (res);
 }

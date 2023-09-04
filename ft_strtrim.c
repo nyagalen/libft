@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svydrina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: svetlana <svetlana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 19:34:12 by svydrina          #+#    #+#             */
-/*   Updated: 2023/05/14 23:42:09 by svydrina         ###   ########.fr       */
+/*   Updated: 2023/08/31 15:30:10 by svetlana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	new[i] = '\0';
 	return (new);
-}	
+}

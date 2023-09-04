@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svydrina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: svetlana <svetlana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 19:38:39 by svydrina          #+#    #+#             */
-/*   Updated: 2023/05/16 21:10:13 by svydrina         ###   ########.fr       */
+/*   Updated: 2023/08/31 15:29:43 by svetlana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,4 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	}
 	return (lst);
-}	
+}

@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_put_posint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svetlana <svetlana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svydrina <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 16:11:56 by svydrina          #+#    #+#             */
-/*   Updated: 2023/08/31 15:28:46 by svetlana         ###   ########.fr       */
+/*   Created: 2023/05/24 16:27:00 by svydrina          #+#    #+#             */
+/*   Updated: 2023/08/25 02:55:50 by svydrina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_put_posint(unsigned int u)
 {
-	void	*new;
-
-	if (nmemb != 0 && size != 0)
-	{
-		if ((nmemb * size) / size != nmemb)
-			return (NULL);
-	}
-	new = malloc(size * nmemb);
-	if (!new)
-		return (NULL);
-	ft_bzero(new, nmemb * size);
-	return (new);
+	if (u < 10)
+		return (ft_putchar(u + 48));
+	return (ft_put_posint(u / 10) + ft_put_posint(u % 10));
 }

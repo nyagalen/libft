@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svydrina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: svetlana <svetlana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:49:06 by svydrina          #+#    #+#             */
-/*   Updated: 2023/05/18 18:26:40 by svydrina         ###   ########.fr       */
+/*   Updated: 2023/08/31 15:28:29 by svetlana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		lst = lst->next;
 	}
 	return (init);
-}		
+}
